@@ -1,0 +1,18 @@
+@import "../pin/pin";
+
+html {
+  background-color: #333333;
+}
+
+h1 {
+  font: normal normal 200 8em/1 "Source Sans Pro", sans-serif;
+  color: limegreen;
+  text-transform: uppercase;
+  display: table;
+  margin: 0 auto;
+
+  &:before,
+  &:after {
+    content: "+";
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "pin",
+  "version": "0.0.0",
+  "description": "Set the pinnable area and point of interest",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trickybit/pin.git"
+  },
+  "author": "tappily",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trickybit/pin/issues"
+  },
+  "homepage": "https://github.com/trickybit/pin",
+  "devDependencies": {
+    "assemble": "^0.4.41",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^0.7.6",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.11.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-newer": "^0.7.0",
+    "grunt-release": "^0.7.0",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^0.3.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "pin",
+  "version": "0.0.0",
+  "homepage": "https://github.com/trickybit/pin",
+  "authors": [
+    "tappily <tappily.b@gmail.com>"
+  ],
+  "main": "src/less/pin/pin.less",
+  "keywords": [
+    "LESS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
