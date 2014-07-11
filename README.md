@@ -8,9 +8,23 @@ figure {
 }
 ```
 
+# pin.side(@slice)
+
+Align the element within a pinnable area. To contain the dimensions of the element, use .pin.in.side instead.
+
+```less
+figure {
+  .pin(50% 50vmin, 50% 50%);
+  
+  figcaption {
+    .pin.side(9);
+  }
+}
+```
+
 # pin.in(@slice)
 
-Contain the element within a pinnable area using 9-slice.
+Contain the element within a pinnable area using 9-slice. Use ths to avoid the area of interest.
 
 ```less
 figure {
