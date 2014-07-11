@@ -1,8 +1,31 @@
-.pin() {
+.pin(@area, @point) {
+  @_area: @area;
+  @_point: @point;
+
+  width: extract(@_area, 1);
+  min-height: extract(@_area, 2);
 
   .src() {
+    :before {
 
+    }
   }
+
+  .guide() {
+    @guide: fade(blue, 50);
+    @rule: fade(magenta, 50);
+    background+: linear-gradient(0, @guide, @guide);
+    background-size+: 1px 1px;
+    background+: linear-gradient(0, @guide, @guide);
+    background-size+: 1px 1px;
+    background+: linear-gradient(0, @rule 1px, transparent 1px);
+    background-size+: 1em 1em;
+    background+: linear-gradient(90deg, @rule 1px, transparent 1px);
+    background-size+: 1em 1em;
+    background-repeat: repeat-x, repeat-y, repeat, repeat;
+    background-position: @_point, @_point, 0 0, 0 0;
+  }
+
 
   .in(@slice) {
 

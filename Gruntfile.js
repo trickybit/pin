@@ -134,7 +134,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: 'src/less/**/*.less',
-        tasks: ['less']
+        tasks: ['less', 'newer:autoprefixer:site']
       },
       template: {
         files: 'src/templates/**/*.{js,hbs}',
