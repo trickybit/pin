@@ -16,5 +16,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "seltzer": "https://github.com/trickybit/seltzer.git"
+  }
 }
