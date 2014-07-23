@@ -69,21 +69,29 @@
     @align-factors: 0 0 -1;
     @flows: row column;
     @flex-alignments: flex-start, center, flex-end;
+    @grid: length(@row-alignments) x length(@col-alignments);
 
 
-    .slice.off.col(length(@row-alignments) x length(@col-alignments); @slice; {
+    .slice.off.col(@grid; @slice; {
       .slice-length(min-width, 1, @slice-offset);
       align-self: extract(@flex-alignments, @slice-offset);
     });
 
-    .slice.off.row(length(@row-alignments) x length(@col-alignments); @slice; {
+    .slice.off.row(@grid; @slice; {
       .slice-length(min-height, 2, @slice-offset);
     });
 
     margin: extract(@_offsets, @slice);
 
     .side(@slice) {
+      display: flex;
+      .slice.off.col(@grid; @slice; {
+        justify-content: extract(@flex-alignments, @slice-offset);
+      });
 
+      .slice.off.row(@grid; @slice; {
+        align-items: extract(@flex-alignments, @slice-offset);
+      });
     }
 
     .slice-length(@prop, @vector, @offset) {

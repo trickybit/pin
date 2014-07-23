@@ -4,11 +4,11 @@ title: Pin
 <figure class="ex-1">
   <figcaption>
 {{#markdown}}
-Set a point of interest and image
+Set a point of interest with guides
 
     figure {
       .pin(50% 50vmin, 50% 50%);
-      .pin.image('/assets/img/image.jpg');
+      .pin.guide;
     }
 
 {{/markdown}}
@@ -17,10 +17,10 @@ Set a point of interest and image
 <figure class="ex-2">
   <figcaption>
 {{#markdown}}
-Enable guides
+Add an image
 
     figure {
-      .pin.guide;
+      .pin.image('/assets/img/image.jpg');
     }
 
 {{/markdown}}
@@ -33,10 +33,28 @@ Align items
 
     figure {
       figcaption {
-      .pin.in(7);
+        .pin.in(7);
       }
     }
 
 {{/markdown}}
+  </figcaption>
+</figure>
+
+<figure class="ex-4">
+  <figcaption>
+    <div>
+{{#markdown}}
+Align items
+
+      figure {
+        figcaption {
+          .pin.in(7);
+          .pin.in.side(5);
+        }
+      }
+
+{{/markdown}}
+    </div>
   </figcaption>
 </figure>

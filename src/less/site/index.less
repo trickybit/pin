@@ -36,4 +36,19 @@ h1 {
       .pin.in(7);
     }
   }
+  &-4 {
+    .pin(50% 50vmin, 52% 52%);
+    .pin.guide;
+    .pin.image('/assets/img/i1535.jpg');
+
+    figcaption {
+      .pin.in(7);
+      .pin.in.side(5);
+
+      > :nth-child(n) {
+        max-width: 30em;
+      }
+
+    }
+  }
 }
