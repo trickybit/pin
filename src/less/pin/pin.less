@@ -57,6 +57,10 @@
     background-size+: 1em 1em;
     background-repeat: repeat-x, repeat-y, repeat, repeat;
     background-position: @_point, @_point, 0 0, 0 0;
+
+    > :nth-child(n) {
+      background-color: fade(limegreen, 50%);
+    }
   }
 
   .in(@slice) {
@@ -68,25 +72,37 @@
 
 
     .slice.off.col(length(@row-alignments) x length(@col-alignments); @slice; {
-      .slice-length(max-width, 1, @slice-offset);
+      .slice-length(min-width, 1, @slice-offset);
       align-self: extract(@flex-alignments, @slice-offset);
     });
+
     .slice.off.row(length(@row-alignments) x length(@col-alignments); @slice; {
       .slice-length(min-height, 2, @slice-offset);
     });
+
     margin: extract(@_offsets, @slice);
+
     .side(@slice) {
 
     }
 
     .slice-length(@prop, @vector, @offset) {
       @align-factors: 0 0 -1;
-
       @vector-length: extract(@_area, @vector);
       @vector-bound: extract(@_point, @vector);
+      @align-offset: extract(@align-factors, @offset);
 
-      @aligned-basis: @vector-length * extract(@align-factors, @offset);
-      @{prop}: abs(@aligned-basis + (@vector-length * unit(@vector-bound / 100)));
+      & when (ispercentage(@vector-length)) {
+        .calc(@prop, @align-offset, 100%, @vector-bound);
+      }
+
+      & when not (ispercentage(@vector-length)) {
+        .calc(@prop, @align-offset, @vector-length, @vector-bound);
+;     }
+
+      .calc(@prop, @aligned-basis, @vector-length, @vector-bound) {
+        @{prop}: abs((@vector-length * @align-offset) + (@vector-length * unit(@vector-bound / 100)));
+      }
     }
 
   }
