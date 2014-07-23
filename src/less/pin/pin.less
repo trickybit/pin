@@ -71,9 +71,10 @@
     @flex-alignments: flex-start, center, flex-end;
     @grid: length(@row-alignments) x length(@col-alignments);
 
+    box-sizing: border-box;
 
     .slice.off.col(@grid; @slice; {
-      .slice-length(min-width, 1, @slice-offset);
+      .slice-length(width, 1, @slice-offset);
       align-self: extract(@flex-alignments, @slice-offset);
     });
 
