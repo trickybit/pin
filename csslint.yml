@@ -6,3 +6,4 @@ gradients: false
 known-properties: false
 regex-selectors: false
 duplicate-background-images: false
+fallback-colors: false
