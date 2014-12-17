@@ -2,5 +2,70 @@
 title: Pin
 ---
 <figure class="ex-1">
-  <figcaption>Enable guides</figcaption>
+  <figcaption>
+{{#markdown}}
+Set a point of interest with guides
+
+    figure {
+      .pin(50% 50vmin, 50% 50%);
+      .pin.guide;
+    }
+
+{{/markdown}}
+  </figcaption>
+</figure>
+<figure class="ex-2">
+  <figcaption>
+{{#markdown}}
+Add an image
+
+    figure {
+      .pin.image('/assets/img/image.jpg');
+    }
+
+{{/markdown}}
+  </figcaption>
+</figure>
+<figure class="ex-3">
+  <figcaption>
+{{#markdown}}
+Align items
+
+    figure {
+      figcaption {
+        .pin.in(3);
+      }
+    }
+
+{{/markdown}}
+  </figcaption>
+</figure>
+
+<figure class="ex-4">
+  <figcaption>
+    <div>
+{{#markdown}}
+Align items
+
+      figure {
+        figcaption {
+          .pin.in(3);
+          .pin.in.side(5);
+        }
+      }
+
+{{/markdown}}
+    </div>
+  </figcaption>
+</figure>
+
+<figure class="ex-5">
+  <figcaption>
+    <div class="panel">
+      <h2>It's pinned.</h2>
+      <p>The CSS is created with LESS mixins and autoprefixer. The elements or
+        classnames you select are left up to you. The output will work with all
+        browsers that support some form of flexbox.
+    </div>
+  </figcaption>
 </figure>

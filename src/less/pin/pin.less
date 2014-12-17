@@ -1,13 +1,45 @@
-.pin(@area, @point) {
+.pin(@area, @point, @orient:row) {
+  @import "../../../bower_components/seltzer/src/less/seltzer/slice";
   @_area: @area;
   @_point: @point;
+  @_orient: @orient;
+  @_offsets:
+  0 auto auto 0, 0 auto auto auto, 0 0 auto auto,
+  auto auto auto 0, auto auto auto auto, auto 0 auto auto,
+  auto auto 0 0, auto auto 0 auto, auto 0 0 auto;
 
-  width: extract(@_area, 1);
+  max-width: extract(@_area, 1);
   min-height: extract(@_area, 2);
+  display: flex;
+  position: relative;
 
-  .src() {
-    :before {
+  &:before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
+  .image(@url) {
+    &:before {
+      background-position: @_point;
+
+      @content: "";
+      @image: url(@url);
+
+      & when(@url = none) {
+        @content: @url;
+        @image: @url;
+
+      }
+
+      content: @content;
+      background-image: @image;
     }
   }
 
@@ -24,13 +56,61 @@
     background-size+: 1em 1em;
     background-repeat: repeat-x, repeat-y, repeat, repeat;
     background-position: @_point, @_point, 0 0, 0 0;
+
+    > :nth-child(n) {
+      background-color: fade(limegreen, 50%);
+    }
   }
 
-
   .in(@slice) {
+    @row-alignments: top middle bottom;
+    @col-alignments: left center right;
+    @align-factors: 0 0 -1;
+    @flows: row column;
+    @flex-alignments: flex-start, center, flex-end;
+    @grid: length(@row-alignments) x length(@col-alignments);
+
+    box-sizing: border-box;
+
+    .slice.off.col(@grid; @slice; {
+      .slice-length(width, 1, @slice-offset);
+      align-self: extract(@flex-alignments, @slice-offset);
+    });
+
+    .slice.off.row(@grid; @slice; {
+      .slice-length(min-height, 2, @slice-offset);
+    });
+
+    margin: extract(@_offsets, @slice);
 
     .side(@slice) {
+      display: flex;
+      .slice.off.col(@grid; @slice; {
+        justify-content: extract(@flex-alignments, @slice-offset);
+      });
 
+      .slice.off.row(@grid; @slice; {
+        align-items: extract(@flex-alignments, @slice-offset);
+      });
+    }
+
+    .slice-length(@prop, @vector, @offset) {
+      @align-factors: 0 0 -1;
+      @vector-length: extract(@_area, @vector);
+      @vector-bound: extract(@_point, @vector);
+      @align-offset: extract(@align-factors, @offset);
+
+      & when (ispercentage(@vector-length)) {
+        .calc(@prop, @align-offset, 100%, @vector-bound);
+      }
+
+      & when not (ispercentage(@vector-length)) {
+        .calc(@prop, @align-offset, @vector-length, @vector-bound);
+;     }
+
+      .calc(@prop, @aligned-basis, @vector-length, @vector-bound) {
+        @{prop}: abs((@vector-length * @align-offset) + (@vector-length * unit(@vector-bound / 100)));
+      }
     }
 
   }
