@@ -1,12 +1,22 @@
 @import "../pin/pin";
 
+@fill: #333333;
+@color: contrast(@fill);
+
 html {
-  background-color: #333333;
+  background-color: @fill;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
-  font: normal normal 200 8em/1 "Source Sans Pro", sans-serif;
+  font-size: 8em;
+  line-height: 1;
+  font-weight: 100;
   color: limegreen;
+  text-shadow: 0 1px 1px contrast(limegreen);
   text-transform: uppercase;
   display: table;
   margin: 0 auto;
@@ -17,9 +27,78 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 3.6em;
+  line-height: 1.025;
+  font-weight: 100;
+  margin: 0;
+}
+
+p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+figure {
+  margin: 3em auto;
+  color: @color;
+  text-shadow: 0 1px 1px contrast(@color);
+}
+
+.panel {
+  background-color: fade(@fill, 50%);
+  padding: 2ex 2em;
+  margin: 4ex 4em;
+}
+
 .ex {
   &-1 {
-    .pin(25% 25vmin, 50% 50%);
+    .pin(50% 50vmin, 50% 50%);
     .pin.guide;
+  }
+  &-2 {
+    .pin(50% 50vmin, 52% 52%);
+    .pin.guide;
+    .pin.image('/assets/img/i1535.jpg');
+  }
+  &-3 {
+    .pin(50% 50vmin, 52% 52%);
+    .pin.guide;
+    .pin.image('/assets/img/i1535.jpg');
+
+    figcaption {
+      .pin.in(3);
+    }
+  }
+  &-4 {
+    .pin(50% 50vmin, 52% 52%);
+    .pin.guide;
+    .pin.image('/assets/img/i1535.jpg');
+
+    figcaption {
+      .pin.in(3);
+      .pin.in.side(5);
+
+      > :nth-child(n) {
+        max-width: 21em;
+      }
+
+    }
+  }
+  &-5 {
+    .pin(50% 50vmin, 52% 52%);
+    .pin.image('/assets/img/i1535.jpg');
+
+    figcaption {
+      .pin.in(3);
+      .pin.in.side(5);
+      color: white;
+
+      > :nth-child(n) {
+        max-width: 21em;
+      }
+
+    }
   }
 }
