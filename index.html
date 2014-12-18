@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pin</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,900"
+        rel="stylesheet">
+  
+</head>
+<body>
+<header><h1>Pin</h1>
+</header>
+<main>
+<figure class="ex-1">
+  <figcaption>
+<p>Set a point of interest with guides</p>
+<pre><code>figure {
+  .pin(50% 50vmin, 50% 50%);
+  .pin.guide;
+}</code></pre>
+
+  </figcaption>
+</figure>
+<figure class="ex-2">
+  <figcaption>
+<p>Add an image</p>
+<pre><code>figure {
+  .pin.image(&#39;/assets/img/image.jpg&#39;);
+}</code></pre>
+
+  </figcaption>
+</figure>
+<figure class="ex-3">
+  <figcaption>
+<p>Align items</p>
+<pre><code>figure {
+  figcaption {
+    .pin.in(3);
+  }
+}</code></pre>
+
+  </figcaption>
+</figure>
+
+<figure class="ex-4">
+  <figcaption>
+    <div>
+<p>Align items</p>
+<pre><code>  figure {
+    figcaption {
+      .pin.in(3);
+      .pin.in.side(5);
+    }
+  }</code></pre>
+
+    </div>
+  </figcaption>
+</figure>
+
+<figure class="ex-5">
+  <figcaption>
+    <div class="panel">
+      <h2>It's pinned.</h2>
+      <p>The CSS is created with LESS mixins and autoprefixer. The elements or
+        classnames you select are left up to you. The output will work with all
+        browsers that support some form of flexbox.
+    </div>
+  </figcaption>
+</figure>
+</main>
+<footer>
+</footer>
+
+</body>
+</html>
+

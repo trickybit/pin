@@ -1,0 +1,251 @@
+html {
+  background-color: #333333;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  font-size: 8em;
+  line-height: 1;
+  font-weight: 100;
+  color: limegreen;
+  text-shadow: 0 1px 1px #000000;
+  text-transform: uppercase;
+  display: table;
+  margin: 0 auto;
+}
+h1:before,
+h1:after {
+  content: "+";
+}
+h2 {
+  font-size: 3.6em;
+  line-height: 1.025;
+  font-weight: 100;
+  margin: 0;
+}
+p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+figure {
+  margin: 3em auto;
+  color: #ffffff;
+  text-shadow: 0 1px 1px #000000;
+}
+.panel {
+  background-color: rgba(51, 51, 51, 0.5);
+  padding: 2ex 2em;
+  margin: 4ex 4em;
+}
+.ex-1 {
+  max-width: 50%;
+  min-height: 50vmin;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background: -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), -webkit-linear-gradient(0deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background: linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background-size: 1px 1px, 1px 1px, 1em 1em, 1em 1em;
+  background-repeat: repeat-x, repeat-y, repeat, repeat;
+  background-position: 50% 50%, 50% 50%, 0 0, 0 0;
+}
+.ex-1:before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ex-1 > :nth-child(n) {
+  background-color: rgba(50, 205, 50, 0.5);
+}
+.ex-2 {
+  max-width: 50%;
+  min-height: 50vmin;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background: -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), -webkit-linear-gradient(0deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background: linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background-size: 1px 1px, 1px 1px, 1em 1em, 1em 1em;
+  background-repeat: repeat-x, repeat-y, repeat, repeat;
+  background-position: 52% 52%, 52% 52%, 0 0, 0 0;
+}
+.ex-2:before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ex-2 > :nth-child(n) {
+  background-color: rgba(50, 205, 50, 0.5);
+}
+.ex-2:before {
+  background-position: 52% 52%;
+  content: "";
+  background-image: url('/assets/img/i1535.jpg');
+}
+.ex-3 {
+  max-width: 50%;
+  min-height: 50vmin;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background: -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), -webkit-linear-gradient(0deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background: linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background-size: 1px 1px, 1px 1px, 1em 1em, 1em 1em;
+  background-repeat: repeat-x, repeat-y, repeat, repeat;
+  background-position: 52% 52%, 52% 52%, 0 0, 0 0;
+}
+.ex-3:before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ex-3 > :nth-child(n) {
+  background-color: rgba(50, 205, 50, 0.5);
+}
+.ex-3:before {
+  background-position: 52% 52%;
+  content: "";
+  background-image: url('/assets/img/i1535.jpg');
+}
+.ex-3 figcaption {
+  box-sizing: border-box;
+  width: 48%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  min-height: 26vmin;
+  margin: 0 0 auto auto;
+}
+.ex-4 {
+  max-width: 50%;
+  min-height: 50vmin;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background: -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), -webkit-linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), -webkit-linear-gradient(0deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background: linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), linear-gradient(0, rgba(255, 0, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 0, 255, 0.5) 1px, transparent 1px);
+  background-size: 1px 1px, 1px 1px, 1em 1em, 1em 1em;
+  background-repeat: repeat-x, repeat-y, repeat, repeat;
+  background-position: 52% 52%, 52% 52%, 0 0, 0 0;
+}
+.ex-4:before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ex-4 > :nth-child(n) {
+  background-color: rgba(50, 205, 50, 0.5);
+}
+.ex-4:before {
+  background-position: 52% 52%;
+  content: "";
+  background-image: url('/assets/img/i1535.jpg');
+}
+.ex-4 figcaption {
+  box-sizing: border-box;
+  width: 48%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  min-height: 26vmin;
+  margin: 0 0 auto auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ex-4 figcaption > :nth-child(n) {
+  max-width: 21em;
+}
+.ex-5 {
+  max-width: 50%;
+  min-height: 50vmin;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.ex-5:before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ex-5:before {
+  background-position: 52% 52%;
+  content: "";
+  background-image: url('/assets/img/i1535.jpg');
+}
+.ex-5 figcaption {
+  box-sizing: border-box;
+  width: 48%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  min-height: 26vmin;
+  margin: 0 0 auto auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+.ex-5 figcaption > :nth-child(n) {
+  max-width: 21em;
+}
